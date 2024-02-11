@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+}
+
+.header-main{
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    align-items: center;
+    /* margin: 5px; */
+    padding: 5px 5px 10px 5px;
+}
+
+.header-logo{
+    width: 90px;
+}
+
+.header-name{
+
+}

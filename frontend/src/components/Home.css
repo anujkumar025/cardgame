@@ -1,0 +1,97 @@
+.Home-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home-text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;  
+    height: 10vh;
+}
+
+span{
+    color: #04AA6D;
+}
+
+.Home-input{
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: lightblue;
+    border-radius: 5px;
+    color: black;
+    border: 1px solid #555;
+}
+
+.Home-input:focus {
+    /* background-color: lightblue; */
+    /* border: 1px solid #555; */
+
+  }
+
+.Home-start-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.Home-start-button{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.Home-card-container{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.cards{
+    width: 250px;
+    background-color: aliceblue;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid grey;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.cards:hover{
+    transform: translateY(-10px) rotateX(5deg);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1160px){
+    .cards{
+        height: 40vh;
+        flex-wrap: wrap;
+    }
+
+    .Home-container{
+        gap: 20px;
+    }
+}

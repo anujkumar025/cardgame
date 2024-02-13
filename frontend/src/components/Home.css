@@ -1,8 +1,28 @@
 .Home-main{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 15px;
+}
+
+.Home-leaderboard{
+    width: 31vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffb1fa;
+    padding: 10px;
+    border-radius: 9px;
+    border: 1px solid #d47bcc;
+}
+
+.leadplayerbox{
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.leadplayerbox span{
+    color: black;
 }
 
 .Home-text-container{
@@ -13,7 +33,7 @@
     height: 10vh;
 }
 
-span{
+.Home-text h1 span{
     color: #04AA6D;
 }
 
@@ -28,11 +48,11 @@ span{
     border: 1px solid #555;
 }
 
-.Home-input:focus {
-    /* background-color: lightblue; */
-    /* border: 1px solid #555; */
+.Each-card-container{
+    width: 200px;
+    height: 31vh;
+}
 
-  }
 
 .Home-start-container{
     display: flex;
@@ -41,6 +61,14 @@ span{
     justify-content: center;
     align-items: center;
     height: 70vh;
+    width: 50vw;
+}
+
+.Home-before-start-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .Home-start-button{
@@ -57,6 +85,11 @@ span{
     border-radius: 5px;
 }
 
+.Home-card-whole-container{
+    display: flex;
+    justify-content: center;
+}
+
 .Home-card-container{
     display: flex;
     gap: 15px;
@@ -67,23 +100,56 @@ span{
     padding: 15px;
 }
 
-.cards{
-    width: 250px;
+
+.cards {
     background-color: aliceblue;
-    height: 40vh;
     display: flex;
+    height: 100%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     border: 1px solid grey;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  
+  .flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .front, .back {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    background-color: #04AA6D;
+    position: absolute;
+  }
+  
+  .back {
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    /* z-index: 2; */
 }
 
-.cards:hover{
-    transform: translateY(-10px) rotateX(5deg);
-    cursor: pointer;
+.Home-image{
+    width: 40%;
+    height: 40%;
 }
+
+.cards:active{
+    transform: rotateY(180deg);
+}
+
+
 
 @media screen and (max-width: 1160px){
     .cards{

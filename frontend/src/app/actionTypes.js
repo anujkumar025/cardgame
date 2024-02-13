@@ -1,0 +1,2 @@
+export  const SCORE_ADDED = "SCORE_ADDED";
+export  const ADDED_USERNAME = "ADDED_USERNAME";

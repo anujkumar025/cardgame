@@ -1,21 +1,43 @@
 import React, { useState, useEffect } from 'react'
 import "./Home.css";
+// import store from '../app/store';
+import {useDispatch} from 'react-redux';
+import { addScore, setuserName } from '../app/actions';
+import axios from "axios";
+
 
 function Home() {
+  const [score, setScore] = useState(0);
   const [hiddenValues, setHiddenValues] = useState([]);
   const [isStarted, setStarted] = useState(false);
   const [cardNumber, setCardNumber] = useState([-1, -1]);
   const [foundDiffuse, setFoundDiffuse] = useState(0);
   const [userName, setUserName] = useState("");
-  const [score, setScore] = useState(0);
+  const dispatch = useDispatch();
 
   useEffect(() => {
+    handleCommunication();
+  }, [score]);
+  
+  useEffect(() => {
     if (cardNumber.length === 0) {
-      setScore(score+1);
+      setScore(prevScore => prevScore+1)
       handleStart();
     }
   }, [cardNumber]);
 
+
+  async function handleCommunication(){
+    await axios.post("http://127.0.0.1:4000/updatescore", {score, userName})
+    .then(res => {
+      if(res.data.message === "User not found"){
+        alert("Some error occured!");}
+      else{
+        console.log("from backend   ", res.data);
+      }
+    })
+  }
+  
   function handleStart() {
     setHiddenValues(() => {
       const numbers = [];
@@ -26,6 +48,9 @@ function Home() {
       return numbers;
     })
     setCardNumber([0,1,2,3,4]);
+    setFoundDiffuse(0);
+    dispatch(addScore(score));
+    dispatch(setuserName(userName));
     setStarted(true);
   }
 
@@ -45,16 +70,17 @@ function Home() {
 
   if(isStarted){
     function flipCardHandler(index) {
-      if(hiddenValues[index] === 3){
-        handleStart();
+      if(hiddenValues[index] === 3 || hiddenValues[index] === 2){
+        setFoundDiffuse(foundDiffuse+1);
+        removeCard(index);
       }
       else if(hiddenValues[index] === 1){
         removeCard(index);
       }
-      else if(hiddenValues[index] === 2){
-        setFoundDiffuse(foundDiffuse+1);
-        removeCard(index);
-      }
+      // else if(hiddenValues[index] === 2){
+      //   setFoundDiffuse(foundDiffuse+1);
+      //   removeCard(index);
+      // }
       else{
         if(foundDiffuse > 0){
           removeCard(index);
@@ -87,7 +113,6 @@ function Home() {
   else{
     function handleUserNameChange(e){
       setUserName(e.target.value);
-      console.log(e.target.value);
     }
     return(
       <div className='Home-start-container'>

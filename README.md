@@ -37,4 +37,3 @@ The objective of the game is simple: draw all 5 cards from the deck without draw
 Enjoy Exploding Kitten, and may the odds be ever in your favor!
 =======
 Enjoy Exploding Kitten, and may the odds be ever in your favor!
->>>>>>> 993e1169220a7672162c7410cd804260d620fd7f

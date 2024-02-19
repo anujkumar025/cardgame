@@ -33,7 +33,4 @@ The objective of the game is simple: draw all 5 cards from the deck without draw
 3. Start the frontend server using `npm start`.
 4. Start the backend server (details in the backend repository).
 
-<<<<<<< HEAD
-Enjoy Exploding Kitten, and may the odds be ever in your favor!
-=======
 Enjoy Exploding Kitten, and may the odds be ever in your favor!

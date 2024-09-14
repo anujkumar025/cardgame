@@ -34,6 +34,7 @@ type Manager interface {
 func connectDb() {
 	godotenv.Load(".env")
 	mongouri := os.Getenv("MONGOURI")
+	fmt.Println(mongouri)
 	client, err := mongo.NewClient(options.Client().ApplyURI(mongouri))
 	if err != nil {
 		fmt.Println(err)

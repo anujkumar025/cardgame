@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eb688774.css",
+    "main.js": "/static/js/main.dd06bdc2.js",
+    "static/media/wire cutter.png": "/static/media/wire cutter.467b9697acccd7003594.png",
+    "static/media/redux.cjs": "/static/media/redux.7edfc461ab353f1712ab.cjs",
+    "static/media/cat.svg": "/static/media/cat.cd52e3e7e02e4162af698072fdc548e9.svg",
+    "static/media/bomb.svg": "/static/media/bomb.4ad987f289f73647d33b1011887aa880.svg",
+    "index.html": "/index.html",
+    "static/media/cards.svg": "/static/media/cards.e5e9fee841f7cc3906392490432a894c.svg",
+    "main.eb688774.css.map": "/static/css/main.eb688774.css.map",
+    "main.dd06bdc2.js.map": "/static/js/main.dd06bdc2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb688774.css",
+    "static/js/main.dd06bdc2.js"
+  ]
+}

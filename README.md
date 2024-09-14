@@ -1,3 +1,5 @@
+## Deployent Link: [Link](https://66e5bd4df79a9a948515cbb2--verdant-squirrel-faca2f.netlify.app/).
+
 # Exploding Kitten
 
 Welcome to Exploding Kitten, a thrilling single-player card game! This web application is built using React with Redux for the frontend and Golang for the backend, with MongoDB as the database.
